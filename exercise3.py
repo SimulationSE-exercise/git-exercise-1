@@ -25,6 +25,7 @@ class Rectangle:
     def upper_right(self) -> Point2D:
         return self.corner(3)
  
+
     def test_interval(self, point: Point2D, tolerance) -> bool:
         ll_px = point.x - self._lower_left.x
         ll_py = point.y - self._lower_left.y
