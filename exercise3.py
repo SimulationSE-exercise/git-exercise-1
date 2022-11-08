@@ -28,12 +28,10 @@ class Rectangle:
     def test_interval(self, point: Point2D) -> bool:
         ll_px = point.x - self._lower_left.x
         ll_py = point.y - self._lower_left.y
-        return ll_px >= 0 and ll_px <= self._dx and ll_py >= 0 and ll_py <= self._dy
+        return ll_px >= 0 and ll_px <= self._dx and ll_py >= 0 and ll_py <= self._dy 
 
     def contains(self, point: Point2D) -> bool:
-        # Task A: remove duplication by defining a function
-        #         that checks if a value is within an interval
-        #         and reuse that here.
+        
         return self.test_interval(point)
 
 
