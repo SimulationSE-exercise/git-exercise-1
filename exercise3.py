@@ -26,6 +26,16 @@ class Rectangle:
         return self.corner(3)
  
     def test_interval(self, point: Point2D) -> bool:
+
+        ll_px = point.x - self._lower_left.x
+        ll_py = point.y - self._lower_left.y
+        return ll_px >= 0 and ll_px <= self._dx and ll_py >= 0 and ll_py <= self._dy 
+
+    def contains(self, point: Point2D) -> bool:
+        
+        return self.test_interval(point)
+
+
         ll_px = point.x - self._lower_left.x
         ll_py = point.y - self._lower_left.y
         return ll_px >= 0 and ll_px <= self._dx and ll_py >= 0 and ll_py <= self._dy
@@ -41,6 +51,7 @@ class Rectangle:
             and ll_py >= (0 - tolerance) and ll_py <= (self._dy + tolerance)
 
         return self.test_interval(point)
+
 
 
 
