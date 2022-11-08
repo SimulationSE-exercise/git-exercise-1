@@ -1,3 +1,10 @@
+"""
+Usage:
+    python exercise4.py
+
+    This python code is used to test the implementation of the Raster class
+"""
+
 from typing import Tuple, List, Callable
 from math import sin, cos
 from matplotlib.pyplot import pcolormesh, show, close
@@ -12,7 +19,16 @@ from exercise3 import Rectangle
 DataArray = List[List[float]]
 
 class Raster:
-    
+
+    """
+    Raster class creates color resolution frame based on given resolution spacing.
+
+    Parameter
+    ----------
+    frame : Rectangle\n
+    resolution : Tuple[int, int]
+    """
+
     def __init__(self, frame: Rectangle, resolution: Tuple[int, int]) -> None:
         self._frame = frame
         self._resolution = resolution
