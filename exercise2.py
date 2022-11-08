@@ -18,8 +18,6 @@ class Point2D:
         self._coordinates += other
         return self
 
-
-
     def __isub__(self, other: Vector):
         self._coordinates -= other
         return self
